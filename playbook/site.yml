@@ -51,7 +51,7 @@
         register: get_elastic
         until: get_elastic is succeeded
         tags: elastic
-      - name: Create directrory for Elasticsearch
+      - name: Create directory for Elasticsearch
         file:
           state: directory
           path: "{{ elastic_home }}"
@@ -87,7 +87,7 @@
         register: get_kibana
         until: get_kibana is succeeded
         tags: kibana
-      - name: Create directrory for Kibana ({{ kibana_home }})
+      - name: Create directory for Kibana ({{ kibana_home }})
         file:
           path: "{{ kibana_home }}"
           state: directory
